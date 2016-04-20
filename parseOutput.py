@@ -1,9 +1,9 @@
-f = open(~/GitHub/dayindata/,'output.txt')
+f = open('outputTest.txt', 'r')
 while True:
     text = f.readline
-    if 'timestamp format' in text: # add in timestamp string here to look for times
-        print text
-    elif 'Download: ' in text: 
+    #if 'timestamp format' in text: # add in timestamp string here to look for times
+    #    print text
+    if 'Download: ' in text: 
         text = text.replace(test[10:15])
         print text
     elif 'Upload: ' in text: 
