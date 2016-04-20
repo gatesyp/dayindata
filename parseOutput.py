@@ -36,12 +36,12 @@ with open('speedtest.csv', 'wb') as csvfile:
 # ---------- Stevens Code not functional yet
 with open('arptest.csv', 'wb') as csvfile:
 # create a dictionary which will hold each rows values
-    row = {'hosts': 0, 'time' : 0}
+    row = {'hosts_total': 0, 'hosts_responded': 0, 'time' : 0}
 # format the csv file
     datawriter = csv.DictWriter(csvfile, row.keys())
     datawriter.writeheader()
 # read  the output file and fill up my dict
-    for text in open('outputArpTest.txt', 'r'):
+    for text in open('laptop-uarh-arp-scan.txt', 'r'):
         if 'Current time: ' in text: # get the time
             print text[-9:]
         if 'Ending arp-scan' in text: # get how many hosts are connected 
