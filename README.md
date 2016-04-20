@@ -1,8 +1,8 @@
 # dayindata
-day in data competition submission
+<p>Scan the UARH network to test the speed and total devices connected to show correlations - devices connected vs network speed</p>
+<br>
+<p></p>
 
 #TODO
--Fill in the specific code
--Test this code
--Write more advanced output handling (ie output to csv file with time, output?)
--change directory of the output.txt to match rpi
+-Find visualization tool which runs CSV files
+-test tool under different strains
