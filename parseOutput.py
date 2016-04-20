@@ -43,6 +43,13 @@ with open('arptest.csv', 'wb') as csvfile:
 # read  the output file and fill up my dict
     for text in open('laptop-uarh-arp-scan.txt', 'r'):
         if 'Current time: ' in text: # get the time
-            print text[-9:]
+            text = text[-9:]
+	    row['time'] = text
         if 'Ending arp-scan' in text: # get how many hosts are connected 
-            print text[-16:]
+		all_hosts = text[23:28]
+            	text = text[-15:-10]
+		print text
+		print all_hosts
+	    	row['hosts_responded'] = text
+	    	row['hosts_total'] = all_hosts 
+		datawriter.writerow(row)
