@@ -3583,4 +3583,3 @@ Starting arp-scan 1.8.4 with 8192 hosts (http://www.nta-monitor.com/tools/arp-sc
 3115 packets received by filter, 0 packets dropped by kernel
 Ending arp-scan 1.8.4: 8192 hosts scanned in 28.632 seconds (286.11 hosts/sec). 3115 responded
 
-
