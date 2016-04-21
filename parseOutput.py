@@ -10,7 +10,7 @@ with open('speedtest.csv', 'wb') as csvfile:
     datawriter = csv.DictWriter(csvfile, row.keys())
     datawriter.writeheader()
 # read  the output file and fill up my dict
-    for text in open('outputTest.txt', 'r'):
+    for text in open('output.txt', 'r'):
         if 'Current time: ' in text: # get the time
             text = text[-9:]
             print text
@@ -41,7 +41,7 @@ with open('arptest.csv', 'wb') as csvfile:
     datawriter = csv.DictWriter(csvfile, row.keys())
     datawriter.writeheader()
 # read  the output file and fill up my dict
-    for text in open('laptop-uarh-arp-scan.txt', 'r'):
+    for text in open('output2.txt', 'r'):
         if 'Current time: ' in text: # get the time
             text = text[-9:]
 	    row['time'] = text
