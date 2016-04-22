@@ -3,14 +3,14 @@ import csv
 # emersons test is fully functaionl
 
 # open the csv file
-with open('speedtest.csv', 'wb') as csvfile:
+with open('speedtest-pi-ouput-20-21.csv', 'wb') as csvfile:
 # create a dictionary which will hold each rows values
     row = {'time': 0, 'latency': 0, 'download': 0, 'upload' : 0}
 # format the csv file
     datawriter = csv.DictWriter(csvfile, row.keys())
     datawriter.writeheader()
 # read  the output file and fill up my dict
-    for text in open('output.txt', 'r'):
+    for text in open('pi-output-UARH-speedtest-20-21.txt', 'r'):
         if 'Current time: ' in text: # get the time
             text = text[-9:]
             print text
@@ -34,14 +34,14 @@ with open('speedtest.csv', 'wb') as csvfile:
 
 
 # ---------- Stevens Code not functional yet
-with open('arptest.csv', 'wb') as csvfile:
+with open('arptest-pi-output-20-21.csv', 'wb') as csvfile:
 # create a dictionary which will hold each rows values
     row = {'hosts_total': 0, 'hosts_responded': 0, 'time' : 0}
 # format the csv file
     datawriter = csv.DictWriter(csvfile, row.keys())
     datawriter.writeheader()
 # read  the output file and fill up my dict
-    for text in open('output2.txt', 'r'):
+    for text in open('pi-output-UARH-arp-scan-20-21.txt', 'r'):
         if 'Current time: ' in text: # get the time
             text = text[-9:]
 	    row['time'] = text
