@@ -3,14 +3,14 @@ import csv
 # emersons test is fully functaionl
 
 # open the csv file
-with open('speedtest-laptop-ouput-21-22.csv', 'wb') as csvfile:
+with open('speedtest-laptop-ouput-21-23.csv', 'wb') as csvfile:
 # create a dictionary which will hold each rows values
     row = {'time': 0, 'latency': 0, 'download': 0, 'upload' : 0}
 # format the csv file
     datawriter = csv.DictWriter(csvfile, row.keys())
     datawriter.writeheader()
 # read  the output file and fill up my dict
-    for text in open('laptop-uarh-speedtest-21-22.txt', 'r'):
+    for text in open('goodOutputanothertry.txt', 'r'):
         if 'Current time: ' in text: # get the time
             text = text[-9:]
             print text
